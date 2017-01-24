@@ -91,7 +91,7 @@ public class Client {
 			System.out.println(" Connected to " + soc.getInetAddress());
 			
 			TCP.writeProtocole(soc, Notification.QUERY_PRINT);
-//			TCP.writeJobKey(soc, keyEnvoi);
+			TCP.writeJobKey(soc, keyEnvoi);
 			
 			ret = TCP.readProtocole(soc);
 			

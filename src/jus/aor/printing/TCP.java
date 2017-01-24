@@ -81,8 +81,9 @@ class TCP{
 		DataInputStream dis = new DataInputStream(is);
 		
 		int taille = dis.readInt();
-		byte[] b = null;
-		dis.read(b, 0, taille);
+		
+		byte[] b = new byte[taille];
+		int sizeread = dis.read(b, 0, taille);
 		
 		return (new JobKey(b))  ;
 	}

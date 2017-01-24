@@ -55,6 +55,7 @@ public class Server {
 					System.out.println("Client " + soc.getInetAddress() + "connected.");				
 					
 					protocole = TCP.readProtocole(soc);
+					
 					key = TCP.readJobKey(soc);
 					
 					System.out.println(protocole);
